@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Channel implements YoutubeChannel {
+	private List<subscribers> subscribers;
+	private String message;
+	private boolean changed;
+	private final Object MUTEX = new Object();
+
+	@Override
+	public void notifie() {
+		List<subscribers> observersLocal = null;
+		synchronized (MUTEX) {
+			if (!changed)
+				return;
+			observersLocal = new ArrayList<>(this.observers);
+			this.changed = false;
+		}
+		for (subscribers obj : observersLocal) {
+			obj.update();
+		}
+	}
+
+	@Override
+	public Object getupdate(subscribers obj) {
+		return this.message;
+
+	}
+
+	public void postmsg(String msg) {
+		System.out.println("Message Posted to Topic:" + msg);
+		this.message = msg;
+		this.changed = true;
+		notification();
+	}
+
+	@Override
+	public void subscribe(subscribers obj) {
+		// TODO Auto-generated method stub
+		if (obj == null)
+			throw new NullPointerException("Null Observer");
+		synchronized (MUTEX) {
+			if (!subscribers.contains(obj))
+				subscribers.add(obj);
+		}
+	}
+
+	@Override
+	public void unsubscribe(subscribers obj) {
+		synchronized (MUTEX) {
+			subscribers.remove(obj);
+		}
+
+	}
+
+	@Override
+	public void notifie() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Object getChannelupdate(subscribers obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

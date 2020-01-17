@@ -1,0 +1,12 @@
+package proxypattern;
+
+
+public class executcmdimp implements executecmd {
+
+	@Override
+	public void login() {
+		System.out.println("successfully login..");
+
+	}
+
+}

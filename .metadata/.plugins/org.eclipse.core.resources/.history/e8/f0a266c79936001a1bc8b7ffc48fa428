@@ -1,0 +1,19 @@
+package visitor;
+
+public class fruits implements itemselements {
+	String name;
+	int price;
+
+	public fruits(String name, int price) {
+		super();
+		this.name = name;
+		this.price = price;
+	}
+
+	@Override
+	public int accept(cartVisitors v) {
+		// TODO Auto-generated method stub
+		return v.visit(this);
+	}
+
+}

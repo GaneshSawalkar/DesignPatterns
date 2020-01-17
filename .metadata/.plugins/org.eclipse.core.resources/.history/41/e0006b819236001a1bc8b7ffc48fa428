@@ -1,0 +1,10 @@
+
+public interface Subject {
+	public void register(Observe obj);
+
+	public void unregister(Observe obj);
+
+	public void notification();
+
+	public void getupdate(Observe obj);
+}

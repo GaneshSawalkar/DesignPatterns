@@ -1,0 +1,18 @@
+
+public class test {
+	public static void main(String[] args) {
+
+		Channel channel = new YoutubeChannel();
+
+		subscribers ganesh = new mysubscriber("ganesh");
+		subscribers sahil = new mysubscriber("sahil");
+		subscribers amit = new mysubscriber("amit");
+
+		channel.subscribe(ganesh);
+		channel.subscribe(sahil);
+		channel.subscribe(amit);
+
+		ganesh.update();
+		channel.getChannelupdate("hi");
+	}
+}

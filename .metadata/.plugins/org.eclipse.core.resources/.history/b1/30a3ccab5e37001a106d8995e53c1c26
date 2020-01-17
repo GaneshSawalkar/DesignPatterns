@@ -1,0 +1,20 @@
+package singletonpractice;
+
+public class threadsafe {
+	private static threadsafe t;
+
+	private threadsafe() {
+	}
+
+	public static threadsafe threadsafeInstance() {
+		if (t == null) {
+			synchronized (threadsafe.class) {
+				if (t == null) {
+					t = new threadsafe();
+				}
+			}
+		}
+		return t;
+	}
+
+}

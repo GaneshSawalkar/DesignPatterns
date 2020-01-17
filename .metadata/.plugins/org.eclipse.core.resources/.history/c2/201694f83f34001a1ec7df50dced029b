@@ -1,0 +1,13 @@
+package main;
+
+public class facade {
+	public static void getreport() {
+
+	}
+}
+
+public static enum dbtype()
+{
+	mysql,
+	oracle;
+}

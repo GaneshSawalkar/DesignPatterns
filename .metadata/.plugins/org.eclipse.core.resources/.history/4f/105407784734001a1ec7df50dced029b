@@ -1,0 +1,26 @@
+package main;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class test {
+	static Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int a = isNumber(scanner.nextInt());
+
+	}
+
+	public static int isNumber(int aa) {
+		int temp;
+		try {
+			temp = aa;
+			return temp;
+		} catch (InputMismatchException e) {
+			throw new InputMismatchException("input wrong");
+			int temp1 = isNumber(scanner.nextInt());
+		}
+
+		return temp1;
+	}
+}

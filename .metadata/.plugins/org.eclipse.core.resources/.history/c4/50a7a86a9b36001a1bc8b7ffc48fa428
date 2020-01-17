@@ -1,0 +1,9 @@
+package visitor;
+
+public class test {
+	public static void main(String[] args) {
+		itemsvisitors items[] = new itemsvisitors[] { new Books("111", 150), new Books("075", 100),
+				new Fruits("orange", 120) };
+		int total = gettotal(items);
+	}
+}

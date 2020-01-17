@@ -1,0 +1,35 @@
+package com.bridgelabz.felloship.model;
+
+public class iphone implements AdopterCharger {
+
+	@Override
+	public volt getvolt() {
+		volt v = new volt(available);
+		return null;
+	}
+
+	@Override
+	public volt get120v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public volt get15v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public volt get12v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public volt get3v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

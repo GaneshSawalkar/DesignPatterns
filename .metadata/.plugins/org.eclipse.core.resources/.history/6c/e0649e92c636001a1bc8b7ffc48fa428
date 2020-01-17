@@ -1,0 +1,19 @@
+package chatpp;
+
+public class userimp extends User {
+	public userimp(chatApp app, String name) {
+		super(name, app);
+	}
+
+	@Override
+	public void send(String msg) {
+System.out.println(msg.this);
+	}
+
+	@Override
+	public void receive(String msg) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

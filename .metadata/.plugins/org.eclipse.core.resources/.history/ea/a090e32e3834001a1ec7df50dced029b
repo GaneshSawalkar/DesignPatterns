@@ -1,0 +1,38 @@
+package com.bridgelabz.felloship.model;
+
+public class samsung implements AdopterCharger {
+
+	@Override
+	public volt getvolt() {
+		volt v = new volt();
+		return v;
+	}
+
+	@Override
+	public volt get120v() {
+		volt v = new volt();
+		return v;
+	}
+
+	@Override
+	public volt get15v() {
+		volt v = new volt();
+		return v;
+	}
+
+	@Override
+	public volt get12v() {
+		volt v = new volt();
+		return v;
+	}
+
+	@Override
+	public volt get3v() {
+		volt v = new volt();
+		return v;
+	}
+	 public volt converts() {
+		
+	}
+
+}

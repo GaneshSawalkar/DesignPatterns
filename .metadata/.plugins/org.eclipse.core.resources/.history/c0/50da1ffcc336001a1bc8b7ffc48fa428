@@ -1,0 +1,13 @@
+package proxypattern;
+
+public class user {
+	public static void main(String[] args) {
+		executecmd exe = new proxy("admin", "123");
+		try {
+			exe.Runcmd("ls");
+		} catch (Exception e) {
+			System.out.println("exception : " + e);
+		}
+
+	}
+}

@@ -1,0 +1,46 @@
+package com.bridgelabz.felloship.model;
+
+public class samsung implements socketadopter {
+	private static int availablevolt;
+	@Override
+	public volt getv(int input) {
+		volt v = new volt(input);
+		return v;
+	}
+
+	@Override
+	public volt get120v(int input) {
+		volt v = new volt(input);
+		return convertvolt(v, 120);
+	}
+
+	@Override
+	public volt get12v(int input) {
+		volt v = new volt(input);
+
+		return convertvolt(v, 12);
+	}
+
+	@Override
+	public volt get15v(int input) {
+		volt v = new volt(input);
+
+		return convertvolt(v, 15);
+	}
+
+	@Override
+	public volt get3v(int input) {
+		volt v = new volt(input);
+		return convertvolt(v, 3);
+	}
+
+	private volt convertvolt(volt v, int i) {
+		int counter = 1;
+		while (v.getVolts() != i) {
+			v.setVolts(v.getVolts() - 1);
+		}
+		return new volt(v.getVolts());
+
+	}
+
+}

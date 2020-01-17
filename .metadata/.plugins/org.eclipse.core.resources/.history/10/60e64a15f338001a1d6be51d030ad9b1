@@ -1,0 +1,74 @@
+package database;
+
+public class dbenum {
+
+	static final String path = "jdbc:mysql://localhost:3306/students";
+	static final String user = "user";
+	static final String pass = "@localhost1";
+	static final String iscinnect = "";
+	static final String error = "";
+	static final String confirmation = "";
+	static final String v = "CREATE DATABASE IF NOT EXISTS ";
+
+	public static String getqueryOpration(querytype type) {
+		switch (type) {
+		case create:
+			System.out.println("Enter table name: ");
+			String tableName = Utility.stringInput();
+			return "CREATE TABLE IF NOT EXISTS " + tableName
+					+ "(id INTEGER not null, first VARCHAR(100), age INTEGER, PRIMARY KEY (id))";
+		case select:
+			return "CREATE TABLE IF NOT EXISTS ";
+		case delete:
+			return "CREATE DATABASE IF NOT EXISTS ";
+		case insert:
+			return "insert into stud if not exists values(?,?,?)";
+		case update:
+			return "CREATE DATABASE IF NOT EXISTS ";
+		default:
+			break;
+		}
+		return "wrong query";
+	}
+
+	public static String getdatabaseOpration(database type) {
+		switch (type) {
+		case create:
+			return "CREATE DATABASE IF NOT EXISTS ";
+		case drop:
+			return "DROP DATABASE ";
+
+		case truncate:
+			return " ";
+		default:
+			break;
+		}
+		return "wrong choice";
+	}
+
+	public static String gettransactionOpration(trancsaction type) {
+		switch (type) {
+		case commit:
+			return System.out.println("commit successfully....");
+		case rollback:
+			return System.out.println("rollback successfully....");
+		case savepoint:
+			return System.out.println("backup successfully....");
+		default:
+			break;
+		}
+		return null;
+	}
+
+	public enum querytype {
+		create, select, delete, update, insert;
+	}
+
+	public enum database {
+		create, drop, truncate;
+	}
+
+	public enum trancsaction {
+		savepoint, commit, rollback;
+	}
+}

@@ -1,0 +1,47 @@
+package visitor;
+
+public class Book implements itemelements {
+	String id;
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	public Book(String id, int price) {
+		super();
+		this.id = id;
+		this.price = price;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the price
+	 */
+	public int getPrice() {
+		return price;
+	}
+
+	/**
+	 * @param price the price to set
+	 */
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	int price;
+
+	@Override
+	public int accept(shopvisitor visit) {
+		// TODO Auto-generated method stub
+		return visit.visit(this);
+	}
+}

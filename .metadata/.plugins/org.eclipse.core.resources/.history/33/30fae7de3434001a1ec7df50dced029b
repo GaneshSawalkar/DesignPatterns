@@ -1,0 +1,24 @@
+package com.bridgelabz.felloship.main;
+
+import java.util.Scanner;
+
+import com.bridgelabz.felloship.model.samsung;
+import com.bridgelabz.felloship.model.socketadopter;
+import com.bridgelabz.felloship.model.volt;
+
+public class socket {
+
+	public static void main(String[] args) {
+		socketadopter s = new samsung();
+		Scanner scanner = new Scanner(System.in);
+
+		int availablevolt = scanner.nextInt();
+		
+		volt v = s.get120v(availablevolt);
+		System.out.println(v.getVolts());
+		volt v1 = s.get12v|(availablevolt));
+		System.out.println(v1.getVolts());
+		volt v2 = s.get3v(availablevolt);
+		System.out.println(v2.getVolts());
+	}
+}

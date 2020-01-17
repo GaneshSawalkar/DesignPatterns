@@ -1,0 +1,6 @@
+
+public interface objects {
+	public void update();
+
+	public void setSubject(Subject obj);
+}

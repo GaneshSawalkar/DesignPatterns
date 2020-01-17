@@ -1,0 +1,14 @@
+package proxypattern;
+
+import java.io.IOException;
+
+public class executcmdimp implements executecmd {
+
+	@Override
+	public void Runcmd(String commnd) throws IOException {
+		Runtime.getRuntime().exec(commnd);
+		System.out.println("'" + commnd + "' command executed.");
+
+	}
+
+}

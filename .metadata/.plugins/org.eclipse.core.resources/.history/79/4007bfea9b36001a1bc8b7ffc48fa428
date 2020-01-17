@@ -1,0 +1,17 @@
+package visitor;
+
+public class Fruits implements itemsvisitors {
+	String name;
+	int price;
+
+	public Fruits(String name, int price) {
+		super();
+		this.name = name;
+		this.price = price;
+	}
+
+	public int accept(Visitorcarts visit) {
+		return visit.visit(this);
+	}
+
+}

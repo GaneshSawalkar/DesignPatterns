@@ -1,0 +1,25 @@
+package com.bridgelabz.felloship.factory;
+
+import com.bridgelabz.felloship.model.add;
+import com.bridgelabz.felloship.model.calculation;
+import com.bridgelabz.felloship.model.div;
+import com.bridgelabz.felloship.model.mul;
+import com.bridgelabz.felloship.model.sub;
+
+public class calculatorfactory {
+	public static calculation getcalculation(String operationtype, int fnum, int snum) {
+		if (operationtype.equalsIgnoreCase("add")) {
+			return new add(fnum, snum);
+		}
+		if (operationtype.equalsIgnoreCase("sub")) {
+			return new sub(fnum, snum);
+		}
+		if (operationtype.equalsIgnoreCase("mul")) {
+			return new mul(fnum, snum);
+		}
+		if (operationtype.equalsIgnoreCase("div")) {
+			return new div(fnum, snum);
+		}
+		return null;
+	}
+}

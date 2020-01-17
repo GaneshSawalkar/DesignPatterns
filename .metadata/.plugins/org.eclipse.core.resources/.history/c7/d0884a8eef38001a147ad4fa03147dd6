@@ -1,0 +1,62 @@
+package database;
+
+public class dbenum {
+
+	static final String path = "jdbc:mysql://localhost:3306/students";
+	static final String user = "user";
+	static final String pass = "@localhost1";
+	static final String iscinnect = "";
+	static final String error = "";
+	static final String confirmation = "";
+	static final String v = "CREATE DATABASE IF NOT EXISTS ";
+
+	public static void getqueryOpration(querytype type) {
+		switch (type) {
+		case select:
+
+			break;
+		case delete:
+
+			break;
+		case insert:
+
+			break;
+		case update:
+
+			break;
+		default:
+			break;
+		}
+	}
+
+	public static void getdatabaseOpration(querytype type) {
+		switch (type) {
+		case select:
+
+			break;
+		case delete:
+
+			break;
+		case insert:
+
+			break;
+		case update:
+
+			break;
+		default:
+			break;
+		}
+	}
+
+	public enum querytype {
+		select, delete, update, insert;
+	}
+
+	public enum database {
+		create, drop;
+	}
+
+	public enum trancsaction {
+		savepoint, commit, rollback;
+	}
+}

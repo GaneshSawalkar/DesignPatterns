@@ -1,0 +1,51 @@
+package main;
+
+
+
+import model.mysql;
+import model.oracle;
+
+public class facade {
+	public static void generateReport(DBTypes dbType, ReportTypes reportType, String tableName) {
+		Connection con = null;
+		switch (dbType) {
+		case MYSQL:
+			mysql mysql = new mysql();
+			switch (reportType) {
+			con = mysql.conmysql();
+			mysql mysql2 = new mysql();
+			switch(reportType){
+			case HTML:
+				mysql2.mysqlreport(tableName, con);
+				break;
+			case PDF:
+				mysql2.mysqlreport(tableName, con);
+				break;
+			}
+			break;
+		case ORACLE:
+
+			switch (reportType) {
+			con = oracle.conoracle();
+			oracle oracle = new oracle();
+			switch(reportType){
+			case HTML:
+				oracle.oraclereport(tableName, con);
+				break;
+			case PDF:
+				oracle.oraclereport(tableName, con);
+				break;
+			}
+			break;
+		}
+
+	}
+
+	public static enum DBTypes {
+		MYSQL, ORACLE;
+	}
+
+	public static enum ReportTypes {
+		HTML, PDF;
+	}
+}

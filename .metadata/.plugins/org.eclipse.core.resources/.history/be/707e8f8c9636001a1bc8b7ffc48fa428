@@ -1,0 +1,6 @@
+package visitor;
+
+public interface shopvisitor {
+int visit(Book b);
+int visit(Fruits f);
+}

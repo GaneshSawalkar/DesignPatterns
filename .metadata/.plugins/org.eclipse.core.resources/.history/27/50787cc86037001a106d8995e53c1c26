@@ -1,0 +1,18 @@
+package singletonpractice;
+
+public class Serialize implements Serializable {
+
+	private static final long serialVersionUID = -7604766932017737115L;
+
+	private public Serialize() {
+	}
+
+	private static class SingletonHelper {
+		private static final Serialize instance = new Serialize();
+	}
+
+	public static Serialize getInstance() {
+		return SingletonHelper.instance;
+	}
+
+}

@@ -1,0 +1,12 @@
+package proxypattern;
+
+public class executcmdimp implements executecmd {
+
+	@Override
+	public void Runcmd(String commnd) {
+		Runtime.getRuntime().exec(commnd);
+		System.out.println("'" + commnd + "' command executed.");
+			
+	}
+
+}

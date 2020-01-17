@@ -1,0 +1,17 @@
+package chatpp;
+
+public abstract class User {
+	String uname;
+	private chatApp chatapp;
+
+	public User(String uname, chatApp chApp) {
+		super();
+		this.uname = uname;
+		this.chApp = chApp;
+	}
+
+	public abstract void send(String msg);
+
+	public abstract void receive(String msg);
+
+}

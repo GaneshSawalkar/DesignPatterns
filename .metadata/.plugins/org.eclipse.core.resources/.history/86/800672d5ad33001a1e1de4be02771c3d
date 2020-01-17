@@ -1,0 +1,25 @@
+package com.bridgelabz.felloship.main;
+
+import java.awt.List;
+
+import com.bridgelabz.felloship.model.employee;
+
+public class showemp {
+	public static void main(String[] args) {
+		employee emps = new employee();
+		emps.loadData();
+
+		// Use the clone method to get the Employee object
+		employee empsNew = (employee) emps.clone();
+		employee empsNew1 = (employee) emps.clone();
+	//	List<String> list = empsNew.getEmplist();
+	//	list.add("John");
+	//	List<String> list1 = empsNew1.getEmplist();
+	//	list1.remove("Pankaj");
+
+		System.out.println("emps List: " + emps.getEmplist());
+	//	System.out.println("empsNew List: " + list);
+	//	System.out.println("empsNew1 List: " + list1);
+System.out.println(empsNew);
+	}
+}

@@ -1,0 +1,9 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.factory.singletone;
+
+public class socket {
+	public static void main(String[] args) {
+	
+	}
+}

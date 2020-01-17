@@ -1,0 +1,9 @@
+package com.bridgelabz.felloship.model;
+
+public interface socketadopter {
+	public volt get120v(int input);
+
+	public volt get12v(int input);
+
+	public volt get3v(int input);
+}

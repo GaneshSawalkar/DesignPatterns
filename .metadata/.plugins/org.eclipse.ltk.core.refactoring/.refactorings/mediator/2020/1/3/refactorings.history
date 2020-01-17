@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;chatpp.CHATaPPIMP&apos; to &apos;ChatAppimp&apos;&#x0A;- Original project: &apos;mediator&apos;&#x0A;- Original element: &apos;chatpp.CHATaPPIMP&apos;&#x0A;- Renamed element: &apos;chatpp.ChatAppimp&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CHATaPPIMP&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;chatpp{CHATaPPIMP.java[CHATaPPIMP" matchStrategy="1" name="ChatAppimp" qualified="false" references="true" similarDeclarations="false" stamp="1579003179350" textual="false" version="1.0"/>
+</session>

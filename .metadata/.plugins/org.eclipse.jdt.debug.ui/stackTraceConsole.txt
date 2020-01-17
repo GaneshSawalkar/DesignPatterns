@@ -1,0 +1,2 @@
+channel.subscribe(sahil);
+		channel.subscribe(amit);

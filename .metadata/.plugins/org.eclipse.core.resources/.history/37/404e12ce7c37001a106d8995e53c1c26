@@ -1,0 +1,6 @@
+
+public interface subscribers {
+	public void update();
+
+	public void setSubject(Channel channel);
+}

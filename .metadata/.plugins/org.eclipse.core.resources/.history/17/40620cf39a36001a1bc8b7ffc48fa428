@@ -1,0 +1,17 @@
+package visitor;
+
+public class shopcarts implements Visitorcarts {
+
+	@Override
+	public int visit(Books b) {
+		
+		return b.price;
+	}
+
+	@Override
+	public int visit(Fruits f) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

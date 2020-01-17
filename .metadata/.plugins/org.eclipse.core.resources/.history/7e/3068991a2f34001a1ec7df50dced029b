@@ -1,0 +1,6 @@
+package com.bridgelabz.felloship.model;
+
+public interface socketadopter {
+	public void get120v();
+
+}

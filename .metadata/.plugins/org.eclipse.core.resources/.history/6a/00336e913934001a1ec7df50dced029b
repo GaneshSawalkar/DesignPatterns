@@ -1,0 +1,28 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.AdopterCharger;
+
+import java.util.Scanner;
+
+import com.bridgelabz.felloship.model.*;
+
+public class test {
+	public static void main(String[] args) {
+		AdopterCharger adopterCharger = new samsung();
+		Scanner scanner = new Scanner(System.in);
+
+		samsung.available = scanner.nextInt();
+
+		volt v = adopterCharger.getvolt();
+		System.out.println(v.getVolt());
+		volt v1 = adopterCharger.get120v();
+		System.out.println(v1.getVolt());
+		volt v2 = adopterCharger.get15v();
+		System.out.println(v2.getVolt());
+		volt v3 = adopterCharger.get12v();
+		System.out.println(v3.getVolt());
+		volt v4 = adopterCharger.get3v();
+		System.out.println(v4.getVolt());
+
+	}
+}

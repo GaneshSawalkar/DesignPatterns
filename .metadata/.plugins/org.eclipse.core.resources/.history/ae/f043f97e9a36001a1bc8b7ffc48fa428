@@ -1,0 +1,18 @@
+package visitor;
+
+public class Books implements itemsvisitors {
+	String id;
+	int price;
+
+	public Books(String id, int price) {
+		super();
+		this.id = id;
+		this.price = price;
+	}
+
+	public int accept(Visitorcarts v) {
+		// TODO Auto-generated method stub
+		return v.visit(this);
+	}
+
+}

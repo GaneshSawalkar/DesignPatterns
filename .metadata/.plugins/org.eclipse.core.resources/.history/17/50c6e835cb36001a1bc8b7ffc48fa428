@@ -1,0 +1,36 @@
+
+public class mytopic implements Subject {
+
+	public mytopic() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void register(Observe obj) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void unregister(Observe obj) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void notification() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void getupdate(Observe obj) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void postmsg(String str) {
+
+	}
+
+}

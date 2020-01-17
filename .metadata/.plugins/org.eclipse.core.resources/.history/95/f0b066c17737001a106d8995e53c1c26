@@ -1,0 +1,38 @@
+package proxypattern;
+
+import java.io.IOException;
+
+public class proxy implements executecmd {
+	private boolean isAdmin;
+	private executecmd execute;
+	private boolean isauthorised;
+
+	public proxy(String username, String pass) {
+		if (username.equals("admin") && pass.equals("123")) {
+			execute = new executcmdimp();
+		}
+	}
+
+	public void Runcmd(String commands) throws IOException {
+		if (isAdmin) {
+			execute.Runcmd(commands);
+		} else {
+			if (commands.trim().startsWith("rm")) {
+				System.out.println("not allowed....");
+			} else {
+				execute.Runcmd(commands);
+			}
+		}
+	}
+
+	@Override
+	public void login() {
+		if (isauthorised) {
+			openmenu();
+		} else {
+			System.out.println("only authoriesed have access");
+		}
+
+	}
+
+}

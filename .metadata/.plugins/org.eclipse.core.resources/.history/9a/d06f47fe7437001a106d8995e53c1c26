@@ -1,0 +1,5 @@
+package com.bridgelabz.felloship.model;
+
+public interface calculation {
+	long cal(int firstnumber, int Secondnumber);
+}

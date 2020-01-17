@@ -1,0 +1,23 @@
+package proxypattern;
+
+public class proxylogin implements logins {
+	private logins execute;
+	private boolean isauthorised;
+
+	public proxylogin(String username, String pass) {
+		if (username.equals("admin") && pass.equals("123")) {
+			execute = new loginsimplement();
+		}
+	}
+
+	@Override
+	public void login() {
+		if (isauthorised) {
+			login();
+		} else {
+			System.out.println("only authoriesed have access");
+		}
+
+	}
+
+}

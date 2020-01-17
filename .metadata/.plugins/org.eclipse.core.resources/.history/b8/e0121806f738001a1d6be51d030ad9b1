@@ -1,0 +1,137 @@
+package database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Savepoint;
+import java.sql.Statement;
+
+public class databasedemo {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver"); // load database class drivers
+			Connection con = DriverManager.getConnection(dbenum.path, dbenum.user, dbenum.pass); // generate connection
+			System.out.println(dbenum.isconnected); // show if message connect
+			Statement stmt = con.createStatement(); // creating statement
+			con.setAutoCommit(false);
+			Savepoint save = null;
+			PreparedStatement st = null; // creating prepared statement with null
+			int ch = 0;
+			do {
+				System.out.println("*****welcome to database*****");
+				System.out.println(
+						"1.Database\n2.Create table\n3.Add User\n4.Delete user by ID\n5.Show data by ID\n6.Show all data\n7.Rollback\n8.Exit");
+				System.out.println("please enter your choice: ");
+				ch = Utility.integerInput();
+				switch (ch) {
+				case 1:
+					stmt.execute(dbenum.getdatabaseOpration(dbenum.database.create)); // creating new database
+					System.out.println("Database created");
+					break;
+				case 2:
+					stmt.execute(dbenum.getdatabaseOpration(dbenum.database.drop)); // create new// table
+					System.out.println(" database drop");
+					break;
+				case 3:
+					System.out.println("Bye.....!");
+				default:
+					System.out.println("invalid choice!!");
+					break;
+				}
+			} while (ch != 3);
+			
+			switch(ch) {
+				case 1:
+					stmt.execute(dbenum.getqueryOpration(dbenum.querytype.create)); // create new// table
+					System.out.println(" Table created");
+					break;
+				case 2:
+					st = (PreparedStatement) con.prepareStatement(dbenum.getqueryOpration(dbenum.querytype.insert)); // inserting
+																														// data
+					System.out.println("Enter Id : ");
+					int prepId = Utility.integerInput();
+					System.out.println("Enter name : ");
+					String prepName = Utility.stringInput();
+					System.out.println("Enter age : ");
+					int prepAge = Utility.integerInput();
+					st.setInt(1, prepId); // set id
+					st.setString(2, prepName);// set name
+					st.setInt(3, prepAge);// set age
+					int row = st.executeUpdate(); // updating table in database
+					System.out.println("Data inserted on " + row);
+
+					con.commit(); // Permanent saved entry
+					con.setAutoCommit(true);
+					break;
+				case 3:
+					System.out.println("Enter id : ");
+					int deleteById = Utility.integerInput();
+					st = (PreparedStatement) con.prepareStatement(dbenum.getqueryOpration(dbenum.querytype)); // executing data
+																									// delete query with
+																									// ?
+					st.setInt(1, deleteById); // check id
+
+					st.executeUpdate(); // updating data in database
+					System.out.println("deleted id" + deleteById);
+					con.commit(); // Permanent saved entry
+					break;
+				case 5:
+					System.out.println("Enter id to display student info: ");
+					int id1 = Utility.integerInput();
+					st = (PreparedStatement) con.prepareStatement("select * from stud where id = ?"); // executing query
+																										// to display
+																										// data by id
+					st.setInt(1, id1); // set ? <- id1
+					ResultSet rs = (ResultSet) st.executeQuery(); // get all data set in resultset
+					while (rs.next()) {
+						System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
+					}
+
+					break;
+				case 6:
+					st = (PreparedStatement) con.prepareStatement(dbenum.getqueryOpration(dbenum.querytype.select)); // executing
+																														// query
+																														// to
+																														// display
+					// get all data in table
+					ResultSet detailRs = (ResultSet) st.executeQuery();
+					while (detailRs.next()) {
+						System.out.println(detailRs.getInt(1) + " " + detailRs.getString(2) + " " + detailRs.getInt(3));
+					}
+					break;
+				case 7:
+
+					save = con.setSavepoint("transaction");
+					String status = dbenum.gettransactionOpration(dbenum.trancsaction.savepoint);
+					System.out.println(status);
+					break;
+				case 8:
+					if (save == null) {
+						System.out.println("please set backup then rollback");
+					} else {
+						con.rollback(save);
+						String rollbackstatus = dbenum.gettransactionOpration(dbenum.trancsaction.rollback);
+						System.out.println(rollbackstatus);
+					}
+					break;
+				case 9:
+					System.out.println("Bye....!");
+					break;
+
+				default:
+					System.out.println("invalid choice!!");
+					break;
+				}
+			}while(ch!=9);}catch(SQLException|
+
+	ClassNotFoundException e)
+	{
+		System.out.println(dbenum.iserror);
+	}
+
+}
+
+}

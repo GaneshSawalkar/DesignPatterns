@@ -1,0 +1,11 @@
+package model;
+
+public class mysql {
+	public static void conmysql() {
+
+	}
+
+	public static void mysqlreport() {
+
+	}
+}

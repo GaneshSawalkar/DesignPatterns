@@ -1,0 +1,17 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.employee;
+
+public class showemp {
+	public static void main(String[] args) {
+		employee emps = new employee();
+		emps.loadData();
+
+		// Use the clone method to get the Employee object
+		employee empsNew = (employee) emps.clone();
+		employee empsNew1 = (employee) emps.clone();
+		
+		System.out.println("emps List: " + emps.getEmplist());
+		
+	}
+}

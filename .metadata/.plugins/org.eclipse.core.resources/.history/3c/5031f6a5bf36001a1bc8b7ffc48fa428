@@ -1,0 +1,13 @@
+package model;
+
+import com.sun.jdi.connect.spi.Connection;
+
+public class mysql {
+	public static Connection conmysql() {
+		return null;
+	}
+
+	public static void mysqlreport(String tableName, Connection con) {
+
+	}
+}

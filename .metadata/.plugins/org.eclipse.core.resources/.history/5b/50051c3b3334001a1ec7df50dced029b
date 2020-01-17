@@ -1,0 +1,13 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.samsung;
+
+public class socket {
+
+	public static void main(String[] args) {
+		samsung s = new samsung();
+		
+		System.out.println(s.get3v().getVolts());
+
+	}
+}

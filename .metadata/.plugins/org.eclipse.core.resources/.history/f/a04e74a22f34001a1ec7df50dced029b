@@ -1,0 +1,24 @@
+package com.bridgelabz.felloship.model;
+
+public class iphone implements socketadopter {
+
+	@Override
+	public void get120v() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void get12v() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void get3v() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void convertvolt(String vol,int i)
+}

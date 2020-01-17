@@ -1,0 +1,20 @@
+
+
+public class conection {
+	interface FuncInter2 {
+		void sayMessage(String message);
+	}
+
+	@noused(desc = "", name = "")
+	public static void main(String[] args) {
+		System.out.println(dbenum.querytype.select);
+		/*
+		 * 
+		 * 
+		 * FuncInter2 fobj = message -> System.out.println("Hello " + message);
+		 * fobj.sayMessage("ganesh"); fobj.sayMessage("ajit");
+		 * System.out.println(conection.class.getInterfaces().hashCode());
+		 */
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.socketadopter;
+import com.bridgelabz.felloship.model.volt;
+
+public class socket {
+
+	public static void main(String[] args) {
+		
+socketadopter socketadopter=new socketadopter() {
+	
+	@Override
+	public volt get3v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public volt get12v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public volt get120v() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+};
+	}
+}

@@ -1,0 +1,5 @@
+package chatpp;
+
+public interface chatApp {
+
+}

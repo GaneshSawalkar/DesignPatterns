@@ -1,0 +1,13 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.socketadopter;
+import com.bridgelabz.felloship.model.volt;
+
+public class socket {
+
+	public static void main(String[] args) {
+	socketadopter socketadopter= 
+	
+	
+	
+}

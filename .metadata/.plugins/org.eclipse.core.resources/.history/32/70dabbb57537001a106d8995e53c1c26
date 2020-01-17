@@ -1,0 +1,10 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.factory.calculatorfactory;
+import com.bridgelabz.felloship.model.calculation;
+
+public class calculator {
+	public static void main(String[] args) {
+		calculation c1 = calculatorfactory.getcalculation("add", 10, 20);
+	}
+}

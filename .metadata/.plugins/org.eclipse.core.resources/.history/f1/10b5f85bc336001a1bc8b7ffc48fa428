@@ -1,0 +1,17 @@
+package proxypattern;
+
+public class proxy {
+	private boolean isAdmin;
+	private executecmd execute;
+
+	public proxy(String username, String pass) {
+		if (username.equals("admin") && pass.equals("123")) {
+			execute = new executcmdimp();
+		}
+	}
+	 public static void runcmd(String commands) {
+		if (isAdmin) {
+			
+		}
+	}
+}

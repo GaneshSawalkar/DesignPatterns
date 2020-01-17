@@ -1,0 +1,26 @@
+package com.bridgelabz.felloship.main;
+
+import java.util.List;
+
+import com.bridgelabz.felloship.model.Articals;
+
+public class prototype {
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Articals emps = new Articals();
+		emps.loadData();
+
+		// Use the clone method to get the Employee object
+		Articals empsNew = (Articals) emps.clone();
+
+		List<String> list = empsNew.getEmplist();
+		list.add("John");
+		Articals empsNew1 = (Articals) emps.clone();
+		List<String> list1 = empsNew1.getEmplist();
+		list1.remove("Pankaj");
+
+		System.out.println("emps List: " + emps.getEmplist());
+		System.out.println("empsNew List: " + list);
+		System.out.println("empsNew1 List: " + list1);
+
+	}
+}

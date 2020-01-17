@@ -1,0 +1,5 @@
+package visitor;
+
+public interface itemselements {
+	publicvoid int accept(cartVisitors v);
+}

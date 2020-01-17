@@ -1,0 +1,10 @@
+
+public interface Subject {
+	public void register(objects obj);
+
+	public void unregister(objects obj);
+
+	public void notification();
+
+	public void getupdate(objects obj);
+}

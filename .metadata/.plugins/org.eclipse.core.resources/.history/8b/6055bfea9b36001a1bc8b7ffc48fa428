@@ -1,0 +1,19 @@
+package visitor;
+
+public class test {
+	public static void main(String[] args) {
+		itemsvisitors items[] = new itemsvisitors[] { new Books("111", 150), new Books("075", 100),
+				new Fruits("orange", 120) };
+		int total = gettotal(items);
+		System.out.println(total);
+	}
+
+	private static int gettotal(itemsvisitors[] items) {
+		shopcarts shopcarts = new shopcarts();
+		int totals = 0;
+		for (itemsvisitors itemsvisitors : items) {
+			totals = totals + itemsvisitors.accept(shopcarts);
+		}
+		return totals;
+	}
+}

@@ -1,0 +1,26 @@
+package proxypattern;
+
+import java.io.IOException;
+
+public class proxy {
+	private boolean isAdmin;
+	private executecmd execute;
+
+	public proxy(String username, String pass) {
+		if (username.equals("admin") && pass.equals("123")) {
+			execute = new executcmdimp();
+		}
+	}
+
+	public void runcmd(String commands) throws IOException {
+		if (isAdmin) {
+			execute.Runcmd(commands);
+		} else {
+			if (commands.trim().startsWith("rm")) {
+				System.out.println("not allowed....");
+			} else {
+				execute.Runcmd(commands);
+			}
+		}
+	}
+}

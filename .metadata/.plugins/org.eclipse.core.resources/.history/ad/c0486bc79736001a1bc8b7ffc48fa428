@@ -1,0 +1,19 @@
+package visitor;
+
+public class client {
+	public static void main(String[] args) {
+		itemelements[] items = new itemelements[] { new Book("123", 150), new Book("112", 75),
+				new Fruits("banana", 40, 1), new Fruits("ornage", 75, 1) };
+		int total = calculate(items);
+
+	}
+
+	private static int calculate(itemelements[] items) {
+		visitorcarts visitorcarts = new visitorcarts();
+		int sum = 0;
+		for (itemelements itemelements : items) {
+			sum = sum + itemelements.accept(visitorcarts);
+		}
+		return sum;
+	}
+}

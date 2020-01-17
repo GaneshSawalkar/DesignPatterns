@@ -1,0 +1,22 @@
+
+public class mysubscriber implements subscribers {
+	private String name;
+	private Subject topic;
+
+	public mytopicsubscriber(String nm) {
+		this.name = nm;
+	}
+
+	public void update() {
+		String msg = (String) topic.getupdate((subscribers) this);
+		if (msg == null) {
+			System.out.println(name + ":: No new message");
+		} else
+			System.out.println(name + ":: Consuming message::" + msg);
+	}
+
+	public void setSubject(YoutubeChannel sub) {
+		this.topic = sub;
+	}
+
+}

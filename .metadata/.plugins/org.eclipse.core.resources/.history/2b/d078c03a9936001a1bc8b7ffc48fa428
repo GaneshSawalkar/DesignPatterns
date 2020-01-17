@@ -1,0 +1,18 @@
+package visitor;
+
+public class books implements itemselements {
+	String id;
+	int price;
+
+	public books(String id, int price) {
+		super();
+		this.id = id;
+		this.price = price;
+	}
+
+	@Override
+	public int accept(cartVisitors v) {
+		return v;
+	}
+
+}

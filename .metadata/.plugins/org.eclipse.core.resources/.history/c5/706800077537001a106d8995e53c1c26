@@ -1,0 +1,11 @@
+package com.bridgelabz.felloship.model;
+
+public class add implements calculation {
+
+	@Override
+	public long cal(int firstnumber, int Secondnumber) {
+		return firstnumber + Secondnumber;
+
+	}
+
+}

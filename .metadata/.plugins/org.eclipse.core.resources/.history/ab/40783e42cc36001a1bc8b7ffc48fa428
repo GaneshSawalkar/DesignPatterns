@@ -1,0 +1,28 @@
+
+public class test {
+	public static void main(String[] args) {
+		mytopic topic = new mytopic();
+
+		// create observers
+		Observe obj1 = new mytopicsubscriber("Obj1");
+		Observe obj2 = new mytopicsubscriber("Obj2");
+		Observe obj3 = new mytopicsubscriber("Obj3");
+
+		// register observers to the subject
+		topic.register(obj1);
+		topic.register(obj2);
+		topic.register(obj3);
+
+		// attach observer to subject
+		obj1.setSubject(topic);
+		obj2.setSubject(topic);
+		obj3.setSubject(topic);
+
+		// check if any update is available
+		obj1.update();
+
+		// now send message to subject
+		topic.postMessage("New Message");
+
+	}
+}

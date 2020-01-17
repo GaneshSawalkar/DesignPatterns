@@ -1,0 +1,9 @@
+package visitor;
+
+public interface Visitorcarts {
+	public int visit(Books b);
+
+	public int visit(Fruits f);
+
+	public int visit(Books b);
+}

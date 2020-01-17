@@ -1,0 +1,7 @@
+package visitor;
+
+public class test {
+	public static void main(String[] args) {
+		itemsvisitor[] itemsvisitor = new itemsvisitor[] {new Book("11", 100),new Fruits("orange", 75),new Fruits("banana", 45)};
+	}
+}

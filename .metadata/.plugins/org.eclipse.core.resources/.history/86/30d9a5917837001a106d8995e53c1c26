@@ -1,0 +1,26 @@
+package proxypattern;
+
+import java.io.IOException;
+
+public class proxylogin implements executecmd {
+	private boolean isAdmin;
+	private executecmd execute;
+	private boolean isauthorised;
+
+	public proxylogin(String username, String pass) {
+		if (username.equals("admin") && pass.equals("123")) {
+			execute = new executcmdimp();
+		}
+	}
+
+	@Override
+	public void login() {
+		if (isauthorised) {
+			login();
+		} else {
+			System.out.println("only authoriesed have access");
+		}
+
+	}
+
+}

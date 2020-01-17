@@ -1,0 +1,31 @@
+package com.bridgelabz.felloship.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Articals implements Cloneable {
+
+	private List<String> articallist;
+
+	public Articals(List<String> list) {
+		this.articallist = list;
+	}
+
+	public Articals() {
+		super();
+		articallist = new ArrayList<String>();
+	}
+
+	public List<String> articallist() {
+		return articallist;
+	}
+
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		List<String> temp = new ArrayList<String>();
+		for (String s : this.getEmplist()) {
+			temp.add(s);
+		}
+		return new Articals(temp);
+	}
+}

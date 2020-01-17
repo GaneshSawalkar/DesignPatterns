@@ -1,0 +1,22 @@
+package main;
+
+import model.mysql;
+
+public class test {
+	public static void main(String[] args) {
+		String tableName="Employee";
+		
+		//generating MySql HTML report and Oracle PDF report without using Facade
+		Connection con = mysql.getMySqlDBConnection();
+		mysql mySqlHelper = new mysql();
+		mySqlHelper.generateMySqlHTMLReport(tableName, con);
+		
+		Connection con1 = OracleHelper.getOracleDBConnection();
+		oracleHelper oracleHelper = new oracleHelper();
+		oracleHelper.generateOraclePDFReport(tableName, con1);
+		
+		//generating MySql HTML report and Oracle PDF report using Facade
+		facade.generateReport(facade.DBTypes.MYSQL, facade.ReportTypes.HTML, tableName);
+		facade.generateReport(facade.DBTypes.ORACLE, facade.ReportTypes.PDF, tableName);
+	}
+}

@@ -1,0 +1,10 @@
+package com.bridgelabz.felloship.main;
+
+import com.bridgelabz.felloship.model.AdopterCharger;
+import com.bridgelabz.felloship.model.*;
+
+public class test {
+	public static void main(String[] args) {
+AdopterCharger adopterCharger= new 
+	}
+}

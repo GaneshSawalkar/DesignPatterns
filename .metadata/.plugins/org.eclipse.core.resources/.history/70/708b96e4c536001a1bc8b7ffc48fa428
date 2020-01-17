@@ -1,0 +1,27 @@
+package chatpp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChatAppimp implements chatApp {
+	private List<User> userlist;
+
+	public ChatAppimp() {
+		userlist = new ArrayList<User>();
+	}
+
+	@Override
+	public void sendmsg(String msg, User user) {
+		for (User user : this.userlist) {
+			if (u != user) {
+
+			}
+		}
+	}
+
+	@Override
+	public void adduser(User user) {
+		this.userlist.add(user);
+	}
+
+}

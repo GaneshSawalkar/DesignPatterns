@@ -1,0 +1,9 @@
+package snippet;
+
+public class Snippet {
+	CREATE PROCEDURE SelectAllCustomers
+	AS
+	SELECT * FROM Customers
+	GO;
+}
+

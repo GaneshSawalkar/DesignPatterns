@@ -1,0 +1,15 @@
+package visitor;
+
+public class visitorcarts implements shopvisitor {
+
+	@Override
+	public int visit(Book b) {
+		return b.getPrice();
+	}
+
+	@Override
+	public int visit(Fruits f) {
+		return f.getPrice();
+	}
+
+}

@@ -1,0 +1,9 @@
+package proxypattern;
+
+import java.io.IOException;
+
+public interface executecmd {
+	void Runcmd(String commnd) throws IOException;
+
+	void login();
+}

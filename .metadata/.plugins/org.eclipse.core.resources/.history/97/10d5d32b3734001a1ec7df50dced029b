@@ -1,0 +1,14 @@
+package com.bridgelabz.felloship.model;
+
+public class volt {
+	
+	public static int getVolt() {
+		return volt;
+	}
+
+	public static void setVolt(int volt) {
+		this.volt = volt;
+	}
+
+	public static int volt;
+}

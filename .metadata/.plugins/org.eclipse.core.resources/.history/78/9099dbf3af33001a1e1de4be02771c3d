@@ -1,0 +1,23 @@
+package com.bridgelabz.felloship.model;
+
+
+public class employee implements Cloneable {
+
+	private List<String> empList;
+
+	public employee() {
+		super();
+		emplist = new ArrayList<String>();
+	}
+
+	public List<String> getEmplist() {
+		return emplist;
+	}
+
+	public void loadData() {
+		emplist.add("Pankaj");
+		emplist.add("Raj");
+		emplist.add("David");
+		emplist.add("Lisa");
+	}
+}

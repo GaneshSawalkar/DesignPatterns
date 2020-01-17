@@ -1,0 +1,18 @@
+package com.bridgelabz.felloship.main;
+
+import java.util.List;
+
+import com.bridgelabz.felloship.model.Articals;
+
+public class prototype {
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Articals oops = new Articals();
+		oops.addlist("basic program");
+		oops.addlist("advance program");
+
+		System.out.println(oops.getarticallist());
+		Articals database = (Articals) oops.clone();
+		System.out.println(database.getarticallist());
+
+	}
+}
