@@ -2,9 +2,9 @@ package com.designpatterns.behavioral.mediator;
 
 public abstract class User {
 	protected String uname;
-	protected chatApp chatapp;
+	protected Chatapp chatapp;
 
-	public User(String uname, chatApp chApp) {
+	public User(String uname, Chatapp chApp) {
 		super();
 		this.uname = uname;
 		this.chatapp = chApp;

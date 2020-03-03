@@ -1,12 +1,12 @@
 package com.designpatterns.behavioral.observed;
 
 public interface Channel {
-	public void subscribe(subscribers obj);
+	public void subscribe(Subscribers obj);
 
-	public void unsubscribe(subscribers obj);
+	public void unsubscribe(Subscribers obj);
 
 	public void notifie();
 
-	public Object getChannelupdate(subscribers obj);
+	public Object getChannelupdate(Subscribers obj);
 
 }

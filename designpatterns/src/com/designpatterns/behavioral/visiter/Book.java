@@ -1,6 +1,6 @@
 package com.designpatterns.behavioral.visiter;
 
-public class Book implements itemsvisitor {
+public class Book implements Itemsvisitor {
 	String id;
 	int price;
 
@@ -11,7 +11,7 @@ public class Book implements itemsvisitor {
 	}
 
 	@Override
-	public int accept(shopcarts visit) {
+	public int accept(Shopcarts visit) {
 		// TODO Auto-generated method stub
 		return visit.visit(this);
 	}

@@ -1,14 +1,14 @@
 package com.designpatterns.structural.adopter;
 
 public interface AdopterCharger {
-	public volt getvolt();
+	public Volt getvolt();
 
-	public volt get120v();
+	public Volt get120v();
 
-	public volt get15v();
+	public Volt get15v();
 
-	public volt get12v();
+	public Volt get12v();
 
-	public volt get3v();
+	public Volt get3v();
 
 }
