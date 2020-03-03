@@ -14,7 +14,7 @@ public class Test {
 	private static void getforiphone() {
 		System.out.println("iphone    :");
 
-		AdopterCharger adopterCharger = new Iphone();
+		Adoptercharger adopterCharger = new Iphone();
 		Iphone.available = scanner.nextInt();
 
 		Volt v = adopterCharger.getvolt();
@@ -36,7 +36,7 @@ public class Test {
 	private static void getforsamsung() {
 		System.out.println("samsung    :");
 
-		AdopterCharger adopterCharger = new Samsung();
+		Adoptercharger adopterCharger = new Samsung();
 		Samsung.available = scanner.nextInt();
 		Volt v = adopterCharger.getvolt();
 		System.out.println(v.getVolt());

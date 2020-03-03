@@ -1,6 +1,6 @@
 package com.designpatterns.structural.adopter;
 
-public interface AdopterCharger {
+public interface Adoptercharger {
 	public Volt getvolt();
 
 	public Volt get120v();

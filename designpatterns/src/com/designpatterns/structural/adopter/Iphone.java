@@ -1,6 +1,6 @@
 package com.designpatterns.structural.adopter;
 
-public class Iphone implements AdopterCharger {
+public class Iphone implements Adoptercharger {
 	public static int available;
 
 	@Override
